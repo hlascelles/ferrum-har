@@ -18,7 +18,7 @@ gem "ferrum-har"
 ## Usage
 
 Use [ferrum](https://github.com/rubycdp/ferrum) as normal and call the `har` method on
-the `page` (or `browser`) object.
+the `page` (or `browser`) object. Chrome must be used as the browser engine.
 
 Note, the devtools window in Chrome will be opened by ferrum-har for the duration of the ferrum
 test run. This is mandatory to obtain the HAR from Chrome.
