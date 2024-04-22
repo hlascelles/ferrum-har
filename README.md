@@ -7,7 +7,7 @@ ferrum-har
 [HAR](https://en.wikipedia.org/wiki/HAR_(file_format)) files while running tests
 using [ferrum](https://github.com/rubycdp/ferrum).
 
-### Installation
+## Installation
 
 Add ferrum-har to your Gemfile and `bundle install`:
 
@@ -15,7 +15,7 @@ Add ferrum-har to your Gemfile and `bundle install`:
 gem "ferrum-har"
 ```
 
-### Usage
+## Usage
 
 Use [ferrum](https://github.com/rubycdp/ferrum) as normal and call the `har` method on
 the `page` (or `browser`) object. Note, you will have to use some of the required browser options
@@ -34,7 +34,7 @@ page.go_to("https://www.bbc.co.uk")
 puts page.har
 ```
 
-### How it works
+## How it works
 
 Creating a HAR file from [ferrum](https://github.com/rubycdp/ferrum) network objects is complex and
 potentially incompatible with the HAR generated
@@ -57,7 +57,16 @@ by the `Ferrum::Har::REQUIRED_BROWSER_OPTIONS` constant.
 For further reading, a full list of Chrome switches can be found
 [here](https://peter.sh/experiments/chromium-command-line-switches/).
 
-### Further work
+## Upgrading
+
+`ferrum-har` uses [semantic versioning](https://semver.org/), so major version changes will usually 
+require additional actions to be taken upgrading from one major version to another. 
+
+## Changelog
+
+A full changelog can be found here: [CHANGELOG.md](https://github.com/hlascelles/ferrum-har/blob/master/CHANGELOG.md)
+
+## Further work
 
 Some ideas for improvements.
 
@@ -79,12 +88,3 @@ Some ideas for improvements.
    However, that doesn't work as it stands as it is just a partial profile. We could add an entire
    Chrome profile but that would be hundreds of files.
 2. Add GitHub Actions tests.
-
-## Upgrading
-
-`ferrum-har` uses [semantic versioning](https://semver.org/), so major version changes will usually 
-require additional actions to be taken upgrading from one major version to another. 
-
-## Changelog
-
-A full changelog can be found here: [CHANGELOG.md](https://github.com/hlascelles/ferrum-har/blob/master/CHANGELOG.md)
