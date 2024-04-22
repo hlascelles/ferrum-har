@@ -79,3 +79,12 @@ Some ideas for improvements.
    However, that doesn't work as it stands as it is just a partial profile. We could add an entire
    Chrome profile but that would be hundreds of files.
 2. Add GitHub Actions tests.
+
+## Upgrading
+
+`ferrum-har` uses [semantic versioning](https://semver.org/), so major version changes will usually 
+require additional actions to be taken upgrading from one major version to another. 
+
+## Changelog
+
+A full changelog can be found here: [CHANGELOG.md](https://github.com/hlascelles/ferrum-har/blob/master/CHANGELOG.md)
