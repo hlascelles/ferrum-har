@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    ferrum-har (0.1.0)
+    ferrum-har (0.1.1)
       base64
       ferrum
 

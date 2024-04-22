@@ -14,7 +14,8 @@ module Ferrum
         execute("document.ferrumHarRequested = true;")
         base64_encoded_har = Ferrum::Utils::Attempt.with_retry(
           errors: [HarNotReadyError],
-          max: 200,
+          # 10 seconds
+          max: 20,
           wait: 0.5
         ) do
           found = evaluate("document.ferrumHar;")
