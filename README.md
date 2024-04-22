@@ -28,7 +28,8 @@ browser = Ferrum::Browser.new(
 )
 page = browser.create_page
 page.go_to("https://www.bbc.co.uk")
-page.network.wait_for_idle
+
+# Returns the HAR as a JSON string
 puts page.har
 ```
 
