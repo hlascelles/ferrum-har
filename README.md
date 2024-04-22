@@ -4,7 +4,8 @@ ferrum-har
 [![Gem Version](https://img.shields.io/gem/v/ferrum-har?color=green)](https://img.shields.io/gem/v/ferrum-har?color=green)
 
 [ferrum-har](https://github.com/hlascelles/ferrum-har) is a gem that adds the ability to capture
-HAR files while running tests using [ferrum](https://github.com/rubycdp/ferrum)
+[HAR](https://en.wikipedia.org/wiki/HAR_(file_format)) files while running tests
+using [ferrum](https://github.com/rubycdp/ferrum).
 
 ### Installation
 
