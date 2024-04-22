@@ -8,7 +8,6 @@ describe Ferrum::Har do
       browser = Ferrum::Browser.new(
         headless: ENV["CI"] == "true",
         window_size: [1824, 768],
-        browser_options: Ferrum::Har::REQUIRED_BROWSER_OPTIONS,
       )
       page = browser.create_page
       page.go_to("https://bbc.com")

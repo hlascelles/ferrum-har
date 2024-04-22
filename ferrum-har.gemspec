@@ -24,8 +24,8 @@ Gem::Specification.new do |spec|
   }
   spec.required_ruby_version = ">= 3.0"
 
-  spec.add_dependency "ferrum"
   spec.add_dependency "base64"
+  spec.add_dependency "ferrum"
 
   spec.files = Dir["{bin,lib}/**/*"] + ["README.md"]
   spec.require_paths = ["lib"]

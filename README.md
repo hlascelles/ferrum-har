@@ -18,16 +18,13 @@ gem "ferrum-har"
 ## Usage
 
 Use [ferrum](https://github.com/rubycdp/ferrum) as normal and call the `har` method on
-the `page` (or `browser`) object. You will have to use some of the required browser options
-by using the `Ferrum::Har::REQUIRED_BROWSER_OPTIONS` constant. 
+the `page` (or `browser`) object.
 
-Note, the devtools window in Chrome will be opened for the duration of the ferrum test run.
-This is mandatory to obtain the HAR from Chrome.
+Note, the devtools window in Chrome will be opened by ferrum-har for the duration of the ferrum
+test run. This is mandatory to obtain the HAR from Chrome.
 
 ```ruby
-browser = Ferrum::Browser.new(
-  browser_options: Ferrum::Har::REQUIRED_BROWSER_OPTIONS,
-)
+browser = Ferrum::Browser.new
 page = browser.create_page
 page.go_to("https://www.bbc.co.uk")
 
@@ -53,7 +50,7 @@ One ramification of this is that the Chrome devtools must be open for the extens
 
 To get the extension to be loaded we must pass some switches to the Chrome process via ferrum,
 specifically the `--auto-open-devtools-for-tabs` and `--load-extension` switches. This is done
-by the `Ferrum::Har::REQUIRED_BROWSER_OPTIONS` constant.
+by ferrum-har automatically.
 
 For further reading, a full list of Chrome switches can be found
 [here](https://peter.sh/experiments/chromium-command-line-switches/).
