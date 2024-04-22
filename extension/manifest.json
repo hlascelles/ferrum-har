@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "ferrum-har extension",
+  "description": "A chrome extension that programmatically captures the HAR and returns it to the user",
+  "version": "1.0",
+  "permissions": [
+    "tabs"
+  ],
+  "host_permissions": ["<all_urls>"],
+  "devtools_page": "devtools.html",
+  "action": {}
+}
