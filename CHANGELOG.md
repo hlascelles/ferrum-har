@@ -1,3 +1,7 @@
+## Unreleased
+
+* Added automatic browser options checks
+
 ## 0.1.3 (2024-04-22)
 
 * Update Chrome extension and add example acceptance test.
