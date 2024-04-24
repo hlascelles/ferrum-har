@@ -1,4 +1,4 @@
-## Unreleased
+## 0.1.4 (2024-04-24)
 
 * Added automatic browser options checks
 
