@@ -1,7 +1,9 @@
 ferrum-har
 ================
 
-[![Gem Version](https://img.shields.io/gem/v/ferrum-har?color=green)](https://img.shields.io/gem/v/ferrum-har?color=green)
+[![Gem Version](https://img.shields.io/gem/v/ferrum-har?color=green)](https://rubygems.org/gems/ferrum-har)
+[![specs workflow](https://github.com/hlascelles/ferrum-har/actions/workflows/specs.yml/badge.svg)](https://github.com/hlascelles/ferrum-har/actions)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 [ferrum-har](https://github.com/hlascelles/ferrum-har) is a gem that adds the ability to capture
 [HAR](https://en.wikipedia.org/wiki/HAR_(file_format)) files while running tests
