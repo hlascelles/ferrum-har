@@ -14,7 +14,7 @@ GEM
       base64
       ferrum
     public_suffix (5.0.5)
-    webrick (1.8.1)
+    webrick (1.8.2)
     websocket-driver (0.7.6)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
