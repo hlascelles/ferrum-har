@@ -60,3 +60,4 @@ build-iPhoneSimulator/
 /.idea/modules.xml
 /.idea/vcs.xml
 /target/
+.idea
