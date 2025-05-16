@@ -61,3 +61,10 @@ build-iPhoneSimulator/
 /.idea/vcs.xml
 /target/
 .idea
+.ruby-version
+/spec/internal/log/
+/.rspec_status
+/pkg
+_site
+.sass-cache
+.jekyll-metadata
