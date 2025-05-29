@@ -1,6 +1,6 @@
 ## 0.1.4 (2024-04-24)
 
-* Added automatic browser options checks
+* Added automatic browser options checks.
 
 ## 0.1.3 (2024-04-22)
 
