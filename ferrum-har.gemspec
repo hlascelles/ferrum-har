@@ -22,7 +22,6 @@ Gem::Specification.new do |spec|
     "bug_tracker_uri" => "https://github.com/hlascelles/ferrum-har/issues",
     "rubygems_mfa_required" => "true",
   }
-  spec.required_ruby_version = ">= 3.1"
 
   spec.add_dependency "base64"
   spec.add_dependency "ferrum"
