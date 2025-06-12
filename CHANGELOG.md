@@ -1,5 +1,6 @@
 ## Unreleased
 
+- Switch to Chrome Testing [#45](https://github.com/hlascelles/ferrum-har/pull/45)
 - Add trusted publishing [#44](https://github.com/hlascelles/ferrum-har/pull/44)
 - Update project files [#36](https://github.com/hlascelles/ferrum-har/pull/36)
 

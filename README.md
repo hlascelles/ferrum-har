@@ -17,6 +17,17 @@ Add ferrum-har to your Gemfile and `bundle install`:
 gem "ferrum-har"
 ```
 
+Since version 1.0, we have had to support [a change](https://developer.chrome.com/blog/extension-news-june-2025#deprecations)
+to the way Chrome handles extensions. You must
+use Chrome Testing to use ferrum-har. A rake task is provided to help you download a chrome binary.
+It will put it in a folder called 
+
+```bash
+bundle exec rake chrome:install
+```
+
+Alternatively you can use the ENV `BROWSER_PATH` to point to the binary location.
+
 ## Usage
 
 Use [ferrum](https://github.com/rubycdp/ferrum) as normal and call the `har` method on

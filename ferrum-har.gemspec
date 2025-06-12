@@ -25,6 +25,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "base64"
   spec.add_dependency "ferrum"
+  spec.add_dependency "selenium_chrome_helper"
 
   spec.files = Dir["{extension,lib}/**/*"] + ["README.md"]
   spec.require_paths = ["lib"]
