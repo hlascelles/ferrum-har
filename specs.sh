@@ -2,6 +2,7 @@
 set -euo pipefail
 
 cd "${0%/*}"
+bundle check || bundle install
 echo "Running specs..."
 bundle exec rake spec
 echo "Running acceptance..."
