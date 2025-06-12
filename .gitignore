@@ -40,6 +40,7 @@ build-iPhoneSimulator/
 
 ## Environment normalization:
 /.bundle/
+/coverage/
 /vendor/bundle
 /lib/bundler/man/
 
@@ -61,3 +62,16 @@ build-iPhoneSimulator/
 /.idea/vcs.xml
 /target/
 .idea
+.ruby-version
+/spec/internal/log/
+/.rspec_status
+/pkg
+_site
+.sass-cache
+.jekyll-metadata
+/log
+.rspec_status
+.byebug_history
+**/.byebug_history
+.bundle
+**/.bundle
