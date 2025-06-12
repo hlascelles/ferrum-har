@@ -4,6 +4,7 @@ PATH
     ferrum-har (0.1.4)
       base64
       ferrum
+      selenium_chrome_helper
 
 GEM
   remote: https://rubygems.org/
@@ -156,7 +157,11 @@ GEM
     ruby_parser (3.21.1)
       racc (~> 1.5)
       sexp_processor (~> 4.16)
+    rubyzip (2.4.1)
     securerandom (0.4.1)
+    selenium_chrome_helper (0.1.9)
+      rake
+      rubyzip (>= 2.0)
     sexp_processor (4.17.3)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
