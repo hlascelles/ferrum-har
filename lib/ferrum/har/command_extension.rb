@@ -12,6 +12,7 @@ module Ferrum
           check_har_related_browser_options(options)
         end
 
+        # TODO: Make it error nicely if the browser is not found
         @path = ENV["BROWSER_PATH"] ||
                 begin
                   # Find the one in the temp download dir.
