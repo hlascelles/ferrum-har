@@ -19,6 +19,14 @@ module Ferrum
                     Gem::Version.new(p.split("/")[1])
                   }
                 end
+
+        return if @path
+
+        raise <<~ERR
+          Browser path not found. Please set BROWSER_PATH environment variable, or trigger a download of Chrome Testing by using:
+
+          bundle exec rake chrome:install
+        ERR
       end
 
       private def check_har_related_browser_options(options)

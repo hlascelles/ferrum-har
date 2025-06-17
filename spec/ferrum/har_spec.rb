@@ -27,6 +27,12 @@ describe Ferrum::Har do
         File.write("target/example.har", har)
         page.screenshot(path: "target/screenshot.png")
         browser.quit
+
+        JSON.parse(har).tap do |har_hash|
+          expect(har_hash).to be_a(Hash)
+          expect(har_hash["log"]).to be_a(Hash)
+          expect(har_hash["log"]["entries"].size).not_to be_empty
+        end
       end
     end
   end

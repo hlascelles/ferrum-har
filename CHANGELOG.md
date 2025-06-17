@@ -1,5 +1,9 @@
 ## Unreleased
 
+- Add check loop [#47](https://github.com/hlascelles/ferrum-har/pull/47)
+
+## 1.0.0 (2025-06-12)
+
 - Switch to Chrome Testing [#45](https://github.com/hlascelles/ferrum-har/pull/45)
 - Add trusted publishing [#44](https://github.com/hlascelles/ferrum-har/pull/44)
 - Update project files [#36](https://github.com/hlascelles/ferrum-har/pull/36)
