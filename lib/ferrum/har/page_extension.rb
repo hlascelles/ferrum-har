@@ -12,7 +12,7 @@ module Ferrum
       def har
         network.wait_for_idle
         execute("document.ferrumHarRequested = true;")
-        base64_encoded_har = Ferrum::Utils::Attempt.with_retry(
+        har_hash_result = Ferrum::Utils::Attempt.with_retry(
           errors: [HarNotReadyError],
           # 10 seconds
           max: 20,
@@ -21,13 +21,18 @@ module Ferrum
           found = evaluate("document.ferrumHar;")
           raise HarNotReadyError unless found
 
-          found
-        end
-        inlined_har = Base64.decode64(base64_encoded_har)
-        har_hash = JSON.parse(inlined_har)
-        raise "Result does not appear to be a HAR" unless har_hash.key?("log")
+          inlined_har = Base64.decode64(found)
+          har_hash = JSON.parse(inlined_har)
+          raise HarNotReadyError, "Result does not appear to be a HAR" unless har_hash.key?("log")
 
-        JSON.pretty_generate(har_hash)
+          entries = har_hash.dig("log", "entries")
+          # If entries is nil or empty, the HAR is not ready yet.
+          raise HarNotReadyError if entries.nil? || entries.empty?
+
+          har_hash
+        end
+
+        JSON.pretty_generate(har_hash_result)
       end
     end
   end
