@@ -1,5 +1,6 @@
-## UNRELEASED
+## 1.0.2 (2025-07-08)
 
+- Allow using persistent Chrome profile directory [#53](https://github.com/hlascelles/ferrum-har/pull/53)
 - Auto require Chrome downloader task [#52](https://github.com/hlascelles/ferrum-har/pull/52)
 
 ## 1.0.1 (2025-06-17)

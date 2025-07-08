@@ -77,13 +77,23 @@ For further reading, a full list of Chrome switches can be found
 `ferrum-har` uses [semantic versioning](https://semver.org/), so major version changes will usually 
 require additional actions to be taken upgrading from one major version to another. 
 
-## Changelog
+## Persistent Chrome profile
 
-A full changelog can be found here: [CHANGELOG.md](https://github.com/hlascelles/ferrum-har/blob/master/CHANGELOG.md)
+You can specify the ENV `FERRUM_HAR_BROWSER_CONFIG_DIR` to point to a persistent Chrome profile dir
+between runs. This will allow you to do slow setup once, then do fast reruns of your tests. Note
+this should only be used for development purposes, your tests should not rely on a persistent
+profile in CI.
+
+See the [spec/acceptance/test.rb](https://github.com/hlascelles/ferrum-har/blob/master/spec/acceptance/test.rb) for
+an example of how to use this.
 
 ## Single file example
 
-A single file example of how to use `ferrum-har` can be found in the `spec/acceptance/test.rb` file.
+A single file example of how to use `ferrum-har` can be found in [spec/acceptance/test.rb](https://github.com/hlascelles/ferrum-har/blob/master/spec/acceptance/test.rb).
+
+## Changelog
+
+A full changelog can be found here: [CHANGELOG.md](https://github.com/hlascelles/ferrum-har/blob/master/CHANGELOG.md)
 
 ```
 
