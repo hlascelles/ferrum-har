@@ -87,6 +87,10 @@ profile in CI.
 See the [spec/acceptance/test.rb](https://github.com/hlascelles/ferrum-har/blob/master/spec/acceptance/test.rb) for
 an example of how to use this.
 
+Note, due to the flags that [ferrum](https://github.com/rubycdp/ferrum) sets, including safety features like `--disable-web-security`, you
+should not use this with your real Chrome profile. It won't work, and will likely clear your cookie
+cache. Instead, create a new profile directory.
+
 ## Single file example
 
 A single file example of how to use `ferrum-har` can be found in [spec/acceptance/test.rb](https://github.com/hlascelles/ferrum-har/blob/master/spec/acceptance/test.rb).
