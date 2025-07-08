@@ -7,6 +7,13 @@ require "ferrum/har/command_extension"
 require "ferrum/har/page_extension"
 require "ferrum/har/options_extension"
 
+# The chrome downloader helper
+if Gem.loaded_specs.key?("rake")
+  require "selenium_chrome_helper"
+  require "rake"
+  load "tasks/install.rake" # Load the chrome testing downloader task
+end
+
 module Ferrum
   module Har
     GEM_DIR = File.expand_path("../..", __dir__)

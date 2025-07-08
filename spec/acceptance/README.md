@@ -3,6 +3,5 @@
 In this folder, run:
 
 ```bash
-bundle install
-bundle exec ruby test.rb
+ruby test.rb
 ```

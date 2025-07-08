@@ -76,4 +76,5 @@ _site
 .bundle
 **/.bundle
 /.chrome-for-testing
-spec/acceptance/.chrome-for-testing
+/spec/acceptance/.chrome-for-testing/
+/spec/acceptance/.chrome-profile/

@@ -6,9 +6,10 @@ module Ferrum
   module Har
     module OptionsExtension
       def merge_default(flags, options)
-        super
-          # We have to remove the "disable-extensions" option from the default browser extension
-          # list because the ferrum-har gem requires an (internal) extension to work.
+        original_result = super
+        # We have to remove the "disable-extensions" option from the default browser extension
+        # list because the ferrum-har gem requires an (internal) extension to work.
+        original_result
           .except("disable-extensions")
           # At some point past v134 this stopped extensions loading properly in the first tab.
           .except("no-startup-window")
