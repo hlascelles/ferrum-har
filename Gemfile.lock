@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    ferrum-har (1.0.1)
+    ferrum-har (1.0.2)
       base64
       ferrum
       selenium_chrome_helper

@@ -4,6 +4,11 @@
 local_gem_test = ENV["FERRUM_HAR_TEST_LOCAL_GEM"] == "true"
 ferrum_har_args = local_gem_test ? { path: File.expand_path("../../", __dir__) } : {}
 
+# With this ENV you can persist browser profiles between runs.
+profile_dir = ENV["FERRUM_HAR_BROWSER_CONFIG_DIR"] = "#{__dir__}/.chrome-profile"
+require "fileutils"
+FileUtils.mkdir_p(profile_dir)
+
 # Use an inline gemfile for this script. This takes the place of a normal Gemfile.
 require "bundler/inline"
 gemfile do
