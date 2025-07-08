@@ -1,3 +1,7 @@
+## UNRELEASED
+
+- Auto require Chrome downloader task [#52](https://github.com/hlascelles/ferrum-har/pull/52)
+
 ## 1.0.1 (2025-06-17)
 
 - Add check loop [#47](https://github.com/hlascelles/ferrum-har/pull/47)

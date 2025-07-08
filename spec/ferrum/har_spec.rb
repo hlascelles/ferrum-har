@@ -31,7 +31,7 @@ describe Ferrum::Har do
         JSON.parse(har).tap do |har_hash|
           expect(har_hash).to be_a(Hash)
           expect(har_hash["log"]).to be_a(Hash)
-          expect(har_hash["log"]["entries"].size).not_to be_empty
+          expect(har_hash["log"]["entries"]).not_to be_empty
         end
       end
     end

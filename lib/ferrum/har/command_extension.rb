@@ -6,19 +6,19 @@ module Ferrum
     class ConfigurationError < RuntimeError
     end
 
+    class << self
+      def find_chrome_for_testing_binary
+        Dir.glob(".chrome-for-testing/**/chrome").max_by { |p| Gem::Version.new(p.split("/")[1]) }
+      end
+    end
+
     module BrowserCommandExtension
       def merge_options
         super.tap do |options|
           check_har_related_browser_options(options)
         end
 
-        @path = ENV["BROWSER_PATH"] ||
-                begin
-                  # Find the one in the temp download dir.
-                  Dir.glob(".chrome-for-testing/*/chrome-linux64/chrome").max_by { |p|
-                    Gem::Version.new(p.split("/")[1])
-                  }
-                end
+        @path = ENV["BROWSER_PATH"] || Ferrum::Har.find_chrome_for_testing_binary
 
         return if @path
 

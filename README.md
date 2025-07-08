@@ -18,15 +18,18 @@ gem "ferrum-har"
 ```
 
 Since version 1.0, we have had to support [a change](https://developer.chrome.com/blog/extension-news-june-2025#deprecations)
-to the way Chrome handles extensions. You must
-use Chrome Testing to use ferrum-har. A rake task is provided to help you download a chrome binary.
-It will put it in a folder called 
+to the way Chrome handles extensions which means you must use [Chrome For Testing](https://developer.chrome.com/blog/chrome-for-testing)
+to use ferrum-har. This involves downloading that Chrome version as a binary.
+
+A rake task is provided to help you download the binary, supplied by the [selenium_chrome_helper](https://github.com/pepito2k/selenium_chrome_helper) gem.
+It will put it in a folder called `.chrome-for-testing` in your project root. To execute it, run:
 
 ```bash
 bundle exec rake chrome:install
 ```
 
-Alternatively you can use the ENV `BROWSER_PATH` to point to the binary location.
+Alternatively you can use the ENV `BROWSER_PATH` to point to the binary location. Note, you can't
+point it to your standard Chrome installation, it must be the Chrome Testing binary.
 
 ## Usage
 
@@ -77,6 +80,12 @@ require additional actions to be taken upgrading from one major version to anoth
 ## Changelog
 
 A full changelog can be found here: [CHANGELOG.md](https://github.com/hlascelles/ferrum-har/blob/master/CHANGELOG.md)
+
+## Single file example
+
+A single file example of how to use `ferrum-har` can be found in the `spec/acceptance/test.rb` file.
+
+```
 
 ## Further work
 
