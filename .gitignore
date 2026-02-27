@@ -75,6 +75,6 @@ _site
 **/.byebug_history
 .bundle
 **/.bundle
-/.chrome-for-testing
-/spec/acceptance/.chrome-for-testing/
-/spec/acceptance/.chrome-profile/
+.chrome-for-testing
+spec/acceptance/.chrome-for-testing
+spec/acceptance/.chrome-profile
