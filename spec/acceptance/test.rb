@@ -18,8 +18,12 @@ gemfile do
   gem "pry-byebug"
 end
 
+# It should have been installed in the root folder
+chrome_path = ENV["BROWSER_PATH"] ||= Dir.chdir("#{__dir__}/../..") do
+  Ferrum::Har.find_chrome_for_testing_binary
+end
+
 # Install the Chrome binary if it is not already installed.
-chrome_path = Ferrum::Har.find_chrome_for_testing_binary
 Rake::Task["chrome:install"].invoke unless chrome_path
 puts "Using Chrome binary at: #{Ferrum::Har.find_chrome_for_testing_binary}"
 
